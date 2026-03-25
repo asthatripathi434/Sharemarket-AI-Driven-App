@@ -1,0 +1,78 @@
+.articles-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fef9c3, #fefefe);
+  color: #1f2937;
+}
+
+.articles-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #b45309;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.articles-text {
+  margin-bottom: 2rem;
+  color: #374151;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Articles Grid */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.article-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  animation: pulseBox 5s infinite ease-in-out;
+}
+
+/* Different colors per article category */
+.article-trends { background: #3b82f6; }       /* blue */
+.article-crypto { background: #22c55e; }       /* green */
+.article-stocks { background: #8b5cf6; }       /* purple */
+.article-risk { background: #ef4444; }         /* red */
+.article-funds { background: #f59e0b; }        /* orange */
+
+/* Summary Box */
+.articles-summary {
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  animation: fadeSlide 1s ease forwards;
+}
+
+.articles-summary h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #0f172a;
+}
+
+.articles-summary p {
+  color: #374151;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

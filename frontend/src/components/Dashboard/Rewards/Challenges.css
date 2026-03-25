@@ -1,0 +1,124 @@
+.challenges-container {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+}
+
+.challenges-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.challenges-text {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.challenge-card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* continuous animation */
+  animation: pulseBox 3s ease-in-out infinite;
+}
+
+.challenge-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.challenge-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.challenge-title {
+  font-weight: bold;
+  color: #111827;
+}
+
+.challenge-desc {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 0.25rem;
+  height: 6px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.progress-fill {
+  background: #2563eb;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.challenge-reward {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #065f46;
+  font-weight: 600;
+}
+
+.banner {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Example section */
+.example-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #eef2ff; /* soft blue background */
+  border-radius: 0.5rem;
+}
+
+.example-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.example-text {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.example-card {
+  border: 2px dashed #2563eb; /* highlight example card */
+  background: #ffffff;
+}
+
+/* Continuous animation keyframes */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}

@@ -1,0 +1,97 @@
+.badges-container {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+}
+
+.badges-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.badges-text {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.badge-card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* continuous animation */
+  animation: pulseBox 6s ease-in-out infinite;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.badge-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.badge-title {
+  font-weight: bold;
+  color: #111827;
+}
+
+.badge-desc {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.badge-card.locked {
+  opacity: 0.6;
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 0.25rem;
+  height: 8px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: #2563eb;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: #374151;
+  margin-top: 0.25rem;
+}
+
+/* Keyframes for continuous animation */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}
+
+
+
+.badge-card {
+  cursor: pointer; /* shows hand cursor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.badge-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}

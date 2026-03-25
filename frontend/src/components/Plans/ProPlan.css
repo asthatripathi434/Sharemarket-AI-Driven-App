@@ -1,0 +1,143 @@
+.pro-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f7f9fa, #f5f8f9);
+  color: #111827;
+}
+
+/* Sidebar - slimmer */
+.pro-sidebar {
+  width: 150px; /* reduced from 250px */
+  background: #0ea5e9;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0 1rem 1rem 0;
+  animation: slideInLeft 1.5s ease-out;
+}
+.pro-sidebar h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.pro-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.pro-sidebar li {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  animation: fadeStable 6s linear infinite;
+}
+
+/* Main Content */
+.pro-main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.pro-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+.pro-hero h1 {
+  font-size: 2.2rem;
+  color: #0369a1;
+}
+.pro-hero p {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+/* Features Showcase - redesigned boxes */
+.pro-features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.feature-box {
+  flex: 1 1 220px;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulseStable 8s linear infinite;
+}
+.feature-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.feature-box span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #0ea5e9;
+}
+.feature-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0369a1;
+}
+.feature-box p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Pricing Ribbon */
+.pro-pricing {
+  text-align: center;
+  margin-top: 3rem;
+}
+.pricing-ribbon {
+  background: #0ea5e9;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.6);
+  animation: glowStable 10s linear infinite;
+}
+.join-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #0ea5e9;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.join-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseStable {
+  0%   { transform: scale(1); opacity: 0.95; }
+  50%  { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.95; }
+}
+@keyframes glowStable {
+  0%   { box-shadow: 0 0 10px rgba(14, 165, 233, 0.3); }
+  50%  { box-shadow: 0 0 20px rgba(14, 165, 233, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(14, 165, 233, 0.3); }
+}
+@keyframes fadeStable {
+  0%   { opacity: 0.9; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.9; }
+}

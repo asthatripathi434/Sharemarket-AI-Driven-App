@@ -1,0 +1,121 @@
+.elite-container {
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, hsl(240, 8%, 97%), hsl(225, 33%, 98%));
+  color: #0b0c0c;
+  padding: 2rem;
+}
+
+/* Hero Banner */
+.elite-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.elite-hero h1 {
+  font-size: 2.5rem;
+  color: #040403;
+  animation: fadeGlow 6s infinite ease-in-out;
+}
+.elite-hero p {
+  font-size: 1.2rem;
+  color: #080808;
+}
+
+/* Benefits */
+.elite-benefits {
+  margin-bottom: 3rem;
+}
+.elite-benefits h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.elite-benefits ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+.elite-benefits li {
+  background: #a6baf0;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  animation: smoothPulse 6s infinite ease-in-out;
+}
+
+/* Pricing */
+.elite-pricing {
+  text-align: center;
+  margin: 3rem 0;
+}
+.pricing-card {
+  background: #22c55e;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: inline-block;
+  color: #fff;
+  animation: fadeSlide 8s infinite ease-in-out;
+}
+.join-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #facc15;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.join-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.elite-testimonials {
+  margin: 3rem 0;
+  text-align: center;
+}
+.testimonial {
+  background: #a6bddd;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  animation: smoothPulse 6s infinite ease-in-out;
+;
+}
+.testimonial span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #060707;
+
+}
+
+/* Footer */
+.elite-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: #070707;
+}
+
+/* Animations */
+@keyframes smoothPulse {
+  0%   { transform: scale(1); opacity: 0.95; }
+  50%  { transform: scale(1.03); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.95; }
+}
+@keyframes fadeSlide {
+  0% { opacity: 0.9; transform: translateY(5px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0.9; transform: translateY(5px); }
+}
+@keyframes fadeGlow {
+  0% { text-shadow: 0 0 5px #facc15; }
+  50% { text-shadow: 0 0 20px #facc15; }
+  100% { text-shadow: 0 0 5px #facc15; }
+}
+@keyframes fadeIn {
+  from { opacity: 0.8; }
+  to   { opacity: 1; }
+}

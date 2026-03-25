@@ -1,0 +1,113 @@
+.free-container {
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #ffffff, #93c5fd);
+  color: #111827;
+  padding: 2rem;
+}
+
+/* Hero Banner */
+.free-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.free-hero h1 {
+  font-size: 2.5rem;
+  color: #2563eb;
+  animation: fadeIn 2s ease-in-out;
+}
+.free-hero p {
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+/* Features */
+.free-features {
+  margin-bottom: 3rem;
+}
+.free-features h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.free-features ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+.free-features li {
+  background: #91b4f0;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  animation: smoothPulse 6s infinite ease-in-out;
+}
+
+/* Comparison */
+.free-vs-elite {
+  margin: 3rem 0;
+  text-align: center;
+}
+.comparison {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.plan {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.free-plan {
+  background: lightseagreen;
+  animation: fadeSlide 8s infinite ease-in-out;
+}
+.elite-plan {
+  background: gold;
+  animation: fadeSlide 8s infinite ease-in-out;
+}
+
+/* CTA */
+.free-cta {
+  text-align: center;
+  margin: 3rem 0;
+}
+.upgrade-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #2563eb;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.upgrade-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.free-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: #0d0e0f;
+}
+
+/* Animations */
+@keyframes smoothPulse {
+  0%   { transform: scale(1); opacity: 0.95; }
+  50%  { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.95; }
+}
+@keyframes fadeSlide {
+  0% { opacity: 0.9; transform: translateY(5px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0.9; transform: translateY(5px); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

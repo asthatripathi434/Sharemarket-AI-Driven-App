@@ -1,0 +1,84 @@
+/* Stats Heading */
+.stats-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+/* Grid layout */
+.stats-grid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* allow wrapping */
+  justify-content: center; /* center cards */
+}
+
+/* Stat cards */
+.stat-card {
+  flex: 0 0 150px; /* fixed width */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem; /* reduced padding */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: breatheGlow 4s ease-in-out infinite;
+  color: #0f172a;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Headings inside stat cards */
+.stat-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+/* Values inside stat cards */
+.stat-card p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* Charts section */
+.charts-section {
+  margin-top: 2rem;
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+.charts-section h3 {
+  margin: 1rem 0;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Chart containers */
+.charts-section .chart-box {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  animation: breatheGlow 4s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes breatheGlow {
+  0%   { transform: scale(1);   box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  50%  { transform: scale(1.02); box-shadow: 0 4px 12px rgba(37,99,235,0.3); }
+  100% { transform: scale(1);   box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

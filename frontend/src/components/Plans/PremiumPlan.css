@@ -1,0 +1,143 @@
+.premium-container {
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #fff7ed, #fde68a);
+  color: #111827;
+  padding: 2rem;
+}
+
+/* Hero Banner */
+.premium-hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #f59e0b, #ee8d1e);
+  color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  animation: fadeIn 1.5s ease-out;
+}
+.premium-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.premium-hero p {
+  font-size: 1.2rem;
+}
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #facc15;
+  color: #111827;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  animation: softGlow 6s infinite ease-in-out;
+}
+
+/* Feature Showcase */
+.premium-features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+.feature {
+  flex: 1 1 150px;
+  text-align: center;
+  margin: 1rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+.feature span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Pricing Spotlight */
+.premium-pricing {
+  text-align: center;
+  margin: 3rem 0;
+}
+.pricing-card {
+  background: #f59e0b;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: inline-block;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.5);
+  animation: softGlow 8s infinite ease-in-out;
+}
+.join-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #b45309;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.7s ease;
+}
+.join-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Comparison Strip */
+.premium-comparison {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 1.5rem;
+}
+.plan-strip {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Colors + Stable Animations */
+.free {
+  background: #b9c9e8;
+  animation: subtlePulse 10s infinite ease-in-out;
+}
+.premium {
+  background: #e0b407;
+  animation: subtlePulse 10s infinite ease-in-out;
+}
+.elite {
+  background: #1e3a8a;
+  color: #fff;
+  animation: subtlePulse 10s infinite ease-in-out;
+}
+
+/* Footer */
+.premium-footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes softGlow {
+  0% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.6); }
+  100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.3); }
+}
+@keyframes subtlePulse {
+  0%   { transform: scale(1); opacity: 0.95; }
+  50%  { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.95; }
+}

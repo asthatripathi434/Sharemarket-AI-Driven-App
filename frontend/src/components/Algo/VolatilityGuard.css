@@ -1,0 +1,115 @@
+/* Volatility Container */
+.volatility-container {
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff; /* clean white background */
+  color: #010101;
+  padding: 2rem;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.05); /* subtle inner shade */
+}
+
+/* Header */
+.volatility-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.volatility-header h2 {
+  font-size: 2rem;
+  color: #3226dc;
+  animation: fadeGlow 6s infinite ease-in-out;
+}
+.volatility-header p {
+  color: #0a0a0a;
+  animation: fadeStable 10s linear infinite;
+}
+
+/* Risk Meters */
+.volatility-meters {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.meter {
+  flex: 1;
+  margin: 0 1rem;
+  background: #f9fafb; /* light card background */
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(8, 8, 8, 0.15); /* stronger shadow */
+  animation: meterFloat 12s ease-in-out infinite;
+}
+.meter h3 {
+  margin-bottom: 1rem;
+  color: #02040a; /* dark text */
+  font-weight: 600;
+  animation: fadeStable 8s linear infinite;
+}
+.bar {
+  height: 12px;
+  border-radius: 6px;
+  animation: pulseBar 4s linear infinite;
+}
+.low .bar { background: #16a34a; }   /* deeper green */
+.medium .bar { background: #ca8a04; } /* stronger amber */
+.high .bar { background: #dc2626; }   /* bold red */
+
+/* Alerts */
+.volatility-alerts {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.alert {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* visible shadow */
+  animation: alertGlow 5s linear infinite, alertPulse 9s ease-in-out infinite;
+}
+.low { background: #d1fae5; color: #065f46; }   /* mint green bg, dark green text */
+.medium { background: #fef9c3; color: #92400e; } /* soft yellow bg, dark amber text */
+.high { background: #fee2e2; color: #991b1b; }   /* light red bg, dark red text */
+
+/* Footer */
+.volatility-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #080809;
+  animation: fadeStable 12s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeGlow {
+  0% { text-shadow: 0 0 5px #38bdf8; }
+  50% { text-shadow: 0 0 15px #38bdf8; }
+  100% { text-shadow: 0 0 5px #38bdf8; }
+}
+@keyframes pulseBar {
+  0%   { transform: scaleX(0.9); opacity: 0.8; }
+  50%  { transform: scaleX(1); opacity: 1; }
+  100% { transform: scaleX(0.9); opacity: 0.8; }
+}
+@keyframes alertGlow {
+  0%   { box-shadow: 0 0 5px rgba(10, 9, 9, 0.2); }
+  50%  { box-shadow: 0 0 15px rgba(7, 6, 6, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(9, 9, 9, 0.2); }
+}
+@keyframes alertPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+@keyframes fadeStable {
+  0%   { opacity: 0.9; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.9; }
+}
+@keyframes meterFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}

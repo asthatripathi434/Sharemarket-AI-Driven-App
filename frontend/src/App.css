@@ -1,0 +1,163 @@
+/* Root container should fill the whole viewport */
+#root {
+  max-width: 100%;        /* allow full width */
+  margin: 0;
+  padding: 0;             /* remove extra padding so background is seamless */
+  text-align: center;
+  min-height: 100vh;      /* ensure it stretches full height */
+}
+
+/* Sidebar stays white */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #ffffff; /* white sidebar */
+  width: 260px;
+  min-height: 100vh;
+}
+
+/* Main content area gets blue background */
+.main {
+  flex: 1;
+  padding: 2rem;
+  background: transparent; /* let body blue show */
+}
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2em;
+}
+
+/* Docs text */
+.read-the-docs {
+  color: #888;
+}
+
+/* Global background for entire page */
+body {
+  background-color: hsl(204, 72%, 89%); /* same soft blue tone */
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+/* Top-level toggle titles (Dashboard, Advisory, Accuracy, etc.) */
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  color: #1f2937; /* dark gray text */
+}
+
+.menu-title:hover {
+  transform: translateX(8px);
+  color: #2563eb; /* blue highlight */
+  background-color: rgba(37, 99, 235, 0.1); /* soft blue hover background */
+}
+
+/* Subtoggle lists (inside each toggle) */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul li {
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #374151; /* medium gray */
+  transition: all 0.2s ease-in-out;
+}
+
+ul li:hover {
+  color: #2563eb; /* blue highlight */
+  background-color: rgba(37, 99, 235, 0.08);
+  transform: translateX(6px);
+}
+
+/* Submenu titles (Rewards, Community inside Dashboard) */
+.submenu-title {
+  font-weight: 700;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.submenu-title:hover {
+  transform: translateX(6px);
+}
+
+/* Rewards submenu styling */
+.submenu-title.text-purple-700 {
+  color: #7e22ce; /* purple */
+}
+.submenu-title.text-purple-700:hover {
+  color: #6b21a8; /* darker purple */
+  background-color: rgba(126, 34, 206, 0.1);
+}
+
+/* Community submenu styling */
+.submenu-title.text-red-700 {
+  color: #dc2626; /* red */
+}
+.submenu-title.text-red-700:hover {
+  color: #b91c1c; /* darker red */
+  background-color: rgba(220, 38, 38, 0.1);
+}
+
+/* Submenu items (Badges, Progress, Sentiment, etc.) */
+.submenu li {
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  color: #374151;
+  transition: all 0.2s ease-in-out;
+}
+
+.submenu li:hover {
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.08);
+  transform: translateX(6px);
+}
+
+
+/** General text color */
+

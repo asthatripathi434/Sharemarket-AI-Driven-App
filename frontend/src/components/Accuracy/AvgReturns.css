@@ -1,0 +1,67 @@
+.avg-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fef9c3, #fefefe);
+  color: #1f2937;
+}
+
+.avg-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #b45309;
+  margin-bottom: 0.5rem;
+}
+
+.avg-text {
+  margin-bottom: 2rem;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+/* Main Metric Box */
+.metric-box {
+  width: 200px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #22c55e;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  animation: pulseBox 3s infinite ease-in-out;
+}
+
+.metric-value {
+  display: block;
+  font-size: 2rem;
+}
+
+/* Breakdown Grid */
+.returns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.return-card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  animation: pulseBox 5s infinite ease-in-out;
+}
+
+/* Different colors per sector */
+.return-tech { background: #0ea5e9; }
+.return-energy { background: #22c55e; }
+.return-finance { background: #8b5cf6; }
+.return-health { background: #f97316; }
+
+/* Continuous animation */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+}

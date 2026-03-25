@@ -1,0 +1,75 @@
+.longterm-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: radial-gradient(circle at top left, #f0f9ff, #fefefe);
+  color: #1f2937;
+}
+
+.longterm-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.longterm-text {
+  margin-bottom: 2rem;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+/* Grid layout */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Base card */
+.strategy-card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, background 0.4s ease;
+  color: #fff; /* make text readable on colored backgrounds */
+}
+.strategy-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* Different background colors per strategy */
+.strategy-card.sip {
+  background: linear-gradient(135deg, rgb(56, 236, 56)); /* green */
+}
+.strategy-card.bluechip {
+  background: linear-gradient(135deg, #2d9cdd); /* blue */
+}
+.strategy-card.diversify {
+  background: linear-gradient(135deg, rgb(223, 223, 14)); /* orange */
+}
+.strategy-card.retirement {
+  background: linear-gradient(135deg,  #6d28d9); /* purple */
+}
+.strategy-card.global {
+  background: linear-gradient(135deg, #9bb318); /* deep orange */
+}
+
+
+/* Progress ring animation */
+.progress-ring {
+  width: 60px;
+  height: 60px;
+  border: 6px solid transparent;
+  border-top: 6px solid #fff; /* white ring for contrast */
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  animation: spinRing 3s linear infinite;
+}
+
+@keyframes spinRing {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

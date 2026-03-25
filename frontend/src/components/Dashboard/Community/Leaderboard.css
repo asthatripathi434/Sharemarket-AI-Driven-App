@@ -1,0 +1,106 @@
+.leaderboard-container {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.leaderboard-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.leaderboard-text {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.leaderboard-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeSlide 0.8s ease forwards;
+}
+
+.leaderboard-item .rank {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.leaderboard-item .name {
+  flex: 1;
+  margin-left: 1rem;
+  color: #111827;
+}
+
+.leaderboard-item .points {
+  color: #374151;
+}
+
+/* Highlight top 3 */
+.leaderboard-item.first {
+  background: #dbeafe;
+  border-left: 4px solid #2563eb;
+  animation: pulseBox 4s ease-in-out infinite;
+}
+
+.leaderboard-item.second {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  animation: pulseBox 4s ease-in-out infinite;
+}
+
+.leaderboard-item.third {
+  background: #fce7f3;
+  border-left: 4px solid #db2777;
+  animation: pulseBox 4s ease-in-out infinite;
+}
+
+.leaderboard-item.fourth {
+  background: #bcedf4;
+  border-left: 4px solid #27db54;
+  animation: pulseBox 4s ease-in-out infinite;
+}
+
+.leaderboard-item.fifth{
+    background: #e0e7ff;
+    border-left: 4px solid #7c3aed;
+    animation: pulseBox 4s ease-in-out infinite;
+}
+
+/* Banner */
+.leaderboard-banner {
+  background: #eef2ff;
+  color: #2563eb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,97 @@
+.daily-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  color: #1f2937;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.daily-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.daily-text {
+  margin-bottom: 2rem;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+/* Tip boxes stacked vertically */
+.tip {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between; /* text left, button right */
+  align-items: center;
+  animation: pulseBox 12s ease-in-out infinite;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.tip:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Text inside tip */
+.tip-text {
+  flex: 1;
+  margin-right: 0.75rem;
+}
+
+.tip-button {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;   /* remove underline */
+  display: inline-block;   /* behave like button */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tip-button:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+.tip-button:active {
+  transform: scale(0.97);
+}
+
+.tip-button:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+.tip-button:active {
+  transform: scale(0.97);
+}
+
+/* Different styles per tip */
+.tip-trend { background: #dcfce7; color: #166534; border-left: 4px solid #22c55e; }
+.tip-risk { background: #fee2e2; color: #b91c1c; border-left: 4px solid #ef4444; }
+.tip-diversify { background: #fef3c7; color: #92400e; border-left: 4px solid #f59e0b; }
+.tip-global { background: #ede9fe; color: #5b21b6; border-left: 4px solid #8b5cf6; }
+.tip-psychology { background: #fff7ed; color: #9a3412; border-left: 4px solid #f97316; }
+.tip-sector { background: #e0f2fe; color: #1e3a8a; border-left: 4px solid #3b82f6; }
+.tip-earnings { background: #f0fdf4; color: #166534; border-left: 4px solid #22c55e; }
+.tip-commodity { background: #fff7ed; color: #9a3412; border-left: 4px solid #f97316; }
+.tip-motivation { background: #fef2f2; color: #b91c1c; border-left: 4px solid #ef4444; }
+
+/* Continuous animation keyframes */
+@keyframes pulseBox {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,101 @@
+.sentiment-container {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sentiment-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.sentiment-text {
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+
+.sentiment-grid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sentiment-box {
+  flex: 1;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: pulseBox 4s ease-in-out infinite;
+}
+
+.sentiment-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sentiment-box p {
+  font-size: 1.5rem;
+}
+
+.sentiment-box.bullish {
+  border-left: 4px solid #22c55e;
+  color: #166534;
+}
+
+.sentiment-box.bearish {
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+}
+
+/* Gauge bar */
+.sentiment-gauge {
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.gauge-fill {
+  padding: 0.5rem;
+  color: #ffffff;
+  animation: slideFill 6s ease-in-out infinite alternate;
+}
+
+.gauge-fill.bullish {
+  background: #22c55e;
+}
+
+.gauge-fill.bearish {
+  background: #ef4444;
+}
+
+/* Banner */
+.sentiment-banner {
+  background: #eef2ff;
+  color: #2563eb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}
+
+@keyframes slideFill {
+  0%   { opacity: 0.8; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.8; }
+}

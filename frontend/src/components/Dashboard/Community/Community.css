@@ -1,0 +1,111 @@
+/* Intro card continuous animation */
+.intro-card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  /* continuous animation */
+  animation: pulseBox 6s ease-in-out infinite;
+}
+
+/* Tabs continuous animation */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  animation: floatBox 6s ease-in-out infinite;
+}
+
+/* Banner continuous animation */
+.banner {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+
+  animation: pulseBox 3s ease-in-out infinite;
+}
+
+/* Tab content continuous animation */
+.tab-content {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  animation: floatBox 4s ease-in-out infinite;
+}
+
+/* Sentiment bar continuous animation */
+.sentiment-bar {
+  display: flex;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  font-weight: bold;
+  text-align: center;
+
+  animation: pulseBox 6s ease-in-out infinite;
+}
+
+.sentiment-grid {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sentiment-box {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: pulseBox 4s ease-in-out infinite;
+}
+
+.sentiment-box h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.sentiment-box p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sentiment-box.bullish {
+  border-left: 4px solid #22c55e; /* green highlight */
+  color: #166534;
+}
+
+.sentiment-box.bearish {
+  border-left: 4px solid #ef4444; /* red highlight */
+  color: #991b1b;
+}
+
+/* reuse your pulse animation */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}
+
+/* Keyframes */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+}
+
+@keyframes floatBox {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}

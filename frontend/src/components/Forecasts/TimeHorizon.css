@@ -1,0 +1,98 @@
+.horizon-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #eef2ff, #fefefe);
+  color: #1f2937;
+}
+
+.horizon-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4338ca;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.horizon-text {
+  margin-bottom: 2rem;
+  color: #374151;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Horizon Ring */
+.horizon-ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 12px solid #6366f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4338ca;
+  animation: pulseRing 3s infinite ease-in-out;
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Horizon Grid */
+.horizon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.horizon-card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  animation: pulseBox 5s infinite ease-in-out;
+}
+
+/* Different colors per horizon */
+.horizon-short { background: #22c55e; }   /* green */
+.horizon-medium { background: #f59e0b; }  /* orange */
+.horizon-long { background: #3b82f6; }    /* blue */
+
+/* Summary Box */
+.horizon-summary {
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  animation: fadeSlide 1s ease forwards;
+}
+
+.horizon-summary h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: #0f172a;
+}
+
+.horizon-summary p {
+  color: #374151;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes pulseBox {
+  0%   { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50%  { transform: scale(1.03); box-shadow: 0 6px 12px rgba(0,0,0,0.15); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

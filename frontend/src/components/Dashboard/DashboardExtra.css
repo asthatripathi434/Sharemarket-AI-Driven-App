@@ -1,0 +1,154 @@
+/* ── Demat Hero Section ── */
+.demat-hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0 24px;
+}
+
+.demat-hero-card {
+  border-radius: 18px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.demat-hero-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* Primary: Deep blue-purple gradient */
+.demat-primary {
+  background: linear-gradient(135deg, #1e3a8a 0%, #4f46e5 60%, #7c3aed 100%);
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(79,70,229,0.35);
+}
+
+/* Secondary: Gold-teal gradient */
+.demat-secondary {
+  background: linear-gradient(135deg, #065f46 0%, #0d9488 60%, #0ea5e9 100%);
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(13,148,136,0.35);
+}
+
+.demat-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 30px;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+.demat-badge-gold { background: rgba(255,215,0,0.25); border-color: rgba(255,215,0,0.4); }
+
+.demat-hero-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.demat-hero-sub {
+  font-size: 13.5px;
+  opacity: 0.88;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.demat-features {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  opacity: 0.92;
+}
+.demat-features span {
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.demat-form { display: flex; flex-direction: column; gap: 10px; }
+
+.demat-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  font-family: "Segoe UI", sans-serif;
+  backdrop-filter: blur(6px);
+}
+.demat-input::placeholder { color: rgba(255,255,255,0.65); }
+.demat-input option { color: #1e293b; background: #fff; }
+
+.demat-otp-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #1e3a8a;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+  font-family: "Segoe UI", sans-serif;
+}
+.demat-otp-btn:hover { background: #f0f4ff; transform: scale(1.02); }
+.demat-ai-btn { color: #065f46; }
+.demat-ai-btn:hover { background: #ecfdf5; }
+
+.demat-note { font-size: 11px; opacity: 0.7; text-align: center; margin: 0; }
+
+/* ── Market Ticker ── */
+.market-ticker {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.ticker-label { background: #ef4444; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+.ticker-up { color: #4ade80; }
+.ticker-down { color: #f87171; }
+.ticker-sep { color: #475569; }
+
+/* ── AI Loading ── */
+.ai-loading { color: #6366f1; font-style: italic; font-size: 13px; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+
+/* ── AI Stat Pills ── */
+.ai-stats-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.ai-stat-pill {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.ai-stat-pill.green { background: #dcfce7; color: #166534; }
+.ai-stat-pill.blue { background: #dbeafe; color: #1e40af; }
+.ai-stat-pill.orange { background: #fef3c7; color: #92400e; }
+
+@media (max-width: 768px) {
+  .demat-hero-section { grid-template-columns: 1fr; }
+  .market-ticker { flex-wrap: wrap; gap: 8px; }
+}

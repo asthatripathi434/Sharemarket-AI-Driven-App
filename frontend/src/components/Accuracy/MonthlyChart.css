@@ -1,0 +1,36 @@
+.monthly-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f0f9ff, #fefefe);
+  color: #1f2937;
+}
+
+.monthly-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.monthly-text {
+  margin-bottom: 2rem;
+  color: #374151;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Chart container */
+.chart-box {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  animation: fadeSlide 1s ease forwards;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

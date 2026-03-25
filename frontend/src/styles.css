@@ -1,0 +1,257 @@
+* { margin: 0; font-family: "Segoe UI", sans-serif; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(120deg, #dbeafe 0%, #ede9fe 50%, #ecfdf5 100%);
+  min-height: 100vh;
+}
+
+.app-container { display: flex; height: 100%; }
+
+/* ─── SIDEBAR ─── */
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  padding: 0;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+  min-height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.logo-gradient {
+  background: linear-gradient(135deg, #1e40af, #7c3aed, #0d9488);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  display: block;
+  padding: 18px 16px 8px;
+  line-height: 1.3;
+}
+.logo-tagline {
+  font-size: 10px;
+  color: #94a3b8;
+  padding: 0 16px 14px;
+  display: block;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.advisory-gradient {
+  background: linear-gradient(135deg, #1e40af, #7c3aed, #0d9488);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── DEMAT BOX IN SIDEBAR ─── */
+.demat-box {
+  margin: 0 12px 12px;
+  background: linear-gradient(135deg, #1e40af, #4f46e5);
+  color: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(30,64,175,0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.demat-box:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(30,64,175,0.4); }
+.demat-box h4 { color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 8px; text-transform: uppercase; }
+.demat-box input {
+  width: 100%;
+  padding: 7px 10px;
+  margin-bottom: 8px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: 7px;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+  font-family: "Segoe UI",sans-serif;
+}
+.demat-box input::placeholder { color: rgba(255,255,255,0.65); }
+.demat-box button {
+  width: 100%;
+  background: #fff;
+  color: #1e40af;
+  border: none;
+  padding: 8px;
+  font-weight: 800;
+  font-size: 12px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: "Segoe UI",sans-serif;
+  letter-spacing: 0.04em;
+}
+.demat-box button:hover { background: #eff6ff; transform: scale(1.03); }
+
+/* ─── SIDEBAR NAV ─── */
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 9px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  color: #1e293b;
+  font-size: 13.5px;
+  margin: 2px 8px;
+}
+.menu-title:hover { transform: translateX(6px); color: #1e40af; background: rgba(30,64,175,0.08); }
+
+ul { list-style: none; padding-left: 0; margin: 0; }
+ul li {
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #475569;
+  transition: all 0.18s ease;
+  margin: 1px 8px;
+}
+ul li:hover { color: #1e40af; background: rgba(30,64,175,0.07); transform: translateX(5px); }
+
+.submenu-title {
+  font-weight: 700;
+  cursor: pointer;
+  padding: 7px 14px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 8px;
+  font-size: 13px;
+}
+.submenu-title.text-purple-700 { color: #7e22ce; }
+.submenu-title.text-purple-700:hover { color: #6b21a8; background: rgba(126,34,206,0.08); transform: translateX(5px); }
+.submenu-title.text-red-700 { color: #dc2626; }
+.submenu-title.text-red-700:hover { color: #b91c1c; background: rgba(220,38,38,0.08); transform: translateX(5px); }
+.submenu li { font-size: 12.5px; padding: 6px 14px; }
+
+/* ─── MAIN CONTENT ─── */
+.main {
+  flex: 1;
+  padding: 2rem;
+  background: transparent;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+/* ─── DASHBOARD CARDS ─── */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.page-title { font-size: 1.6rem; font-weight: 900; }
+.header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.auth-buttons { display: flex; gap: 8px; }
+.auth-button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Segoe UI",sans-serif;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+.login-button { background: #fff; color: #1e40af; border-color: #1e40af; }
+.login-button:hover { background: #eff6ff; }
+.signup-button { background: linear-gradient(135deg,#1e40af,#7c3aed); color: #fff; border: none; }
+.signup-button:hover { opacity: 0.9; transform: scale(1.02); }
+.open-demat-box {
+  padding: 9px 18px;
+  background: linear-gradient(135deg,#0d9488,#0891b2);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  font-family: "Segoe UI",sans-serif;
+}
+.open-demat-box:hover { opacity: 0.9; transform: scale(1.02); }
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.left-column { display: flex; flex-direction: column; gap: 16px; flex: 1; min-width: 220px; }
+.card { border-radius: 14px; padding: 20px; }
+.card-float {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #f1f5f9;
+}
+.card-float:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+.suggested-card { border-left: 4px solid #22c55e; }
+.precaution-card { border-left: 4px solid #f59e0b; font-size: 13px; color: #475569; line-height: 1.6; }
+.precaution-card p { margin-bottom: 4px; }
+.risk-card-wide { flex: 2; min-width: 300px; border-left: 4px solid #6366f1; font-size: 14px; line-height: 1.7; }
+.risk-card-wide p { margin-bottom: 6px; }
+.risk-card-wide small { color: #94a3b8; font-size: 12px; margin-top: 10px; display: block; }
+
+/* ─── SECTION CONTAINERS ─── */
+.intro-card { background: #fff; border-radius: 14px; padding: 22px; margin-bottom: 18px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.heading { font-size: 1.35rem; font-weight: 800; margin-bottom: 8px; }
+.intro-text { font-size: 14px; color: #64748b; line-height: 1.6; }
+
+/* ─── TABS ─── */
+.tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+.tab {
+  padding: 8px 18px;
+  background: rgba(255,255,255,0.8);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  transition: all 0.2s;
+  font-family: "Segoe UI",sans-serif;
+}
+.tab:hover { border-color: #1e40af; color: #1e40af; background: #eff6ff; }
+.tab.active { background: linear-gradient(135deg,#1e40af,#7c3aed); color: #fff; border-color: transparent; }
+
+/* ─── BANNER ─── */
+.banner {
+  background: linear-gradient(135deg,#fef3c7,#fde68a);
+  border: 1px solid #f59e0b;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-size: 13px;
+  color: #92400e;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+/* ─── AI LOADING ─── */
+.ai-loading {
+  color: #6366f1;
+  font-style: italic;
+  font-size: 14px;
+  padding: 12px 0;
+  animation: aiPulse 1.5s ease infinite;
+}
+@keyframes aiPulse { 0%,100%{opacity:1} 50%{opacity:0.5} }

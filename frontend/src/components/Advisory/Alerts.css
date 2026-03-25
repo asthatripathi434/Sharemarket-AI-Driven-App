@@ -1,0 +1,83 @@
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* no shadow, no animation on box */
+}
+
+/* Different styles per alert */
+.alert-stock {
+  background: #fee2e2;  /* soft red background */
+  color: #b91c1c;
+  border-left: 4px solid #ef4444;
+}
+
+.alert-fund {
+  background: #dcfce7;  /* soft green background */
+  color: #166534;
+  border-left: 4px solid #22c55e;
+}
+
+.alert-compliance {
+  background: #fef3c7;  /* soft yellow background */
+  color: #92400e;
+  border-left: 4px solid #f59e0b;
+}
+
+.alert-portfolio {
+  background: #e0f2fe;  /* soft blue background */
+  color: #0369a1;
+  border-left: 4px solid #0ea5e9;
+}
+
+.alert-volatility {
+  background: #ede9fe;  /* soft purple background */
+  color: #5b21b6;
+  border-left: 4px solid #8b5cf6;
+}
+
+.alert-dividend {
+  background: #f0fdf4;  /* light green background */
+  color: #166534;
+  border-left: 4px solid #22c55e;
+}
+
+.alert-ipo {
+  background: #fff7ed;  /* light orange background */
+  color: #9a3412;
+  border-left: 4px solid #f97316;
+}
+
+.alert-currency {
+  background: #f0f9ff;  /* light cyan background */
+  color: #075985;
+  border-left: 4px solid #0284c7;
+}
+
+.alert-global {
+  background: #faf5ff;  /* light violet background */
+  color: #6b21a8;
+  border-left: 4px solid #9333ea;
+}
+
+/* Timestamp + badge */
+.timestamp {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge.urgent { background: #fee2e2; color: #b91c1c; }
+.badge.info { background: #e0f2fe; color: #0369a1; }
+.badge.upcoming { background: #ffedd5; color: #9a3412; }
+.badge.global { background: #ede9fe; color: #6b21a8; }

@@ -1,0 +1,166 @@
+/* Container */
+.advisory-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+  font-family: "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+/* Heading */
+.advisory-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+/* Intro text */
+.advisory-text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #374151;
+  animation: pulseText 3s ease-in-out infinite;
+}
+
+/* Grid layout - 2 equal columns */
+.advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+  gap: 1.2rem;                           /* tighter gap between boxes */
+  margin-bottom: 2rem;
+  width: 100%;                           /* stay inside parent */
+  max-width: 1000px;                     /* limit width so it doesn't overflow */
+  margin-left: auto;
+  margin-right: auto;                    /* center the grid */
+  box-sizing: border-box;
+}
+
+/* Advisory cards */
+.advisory-card {
+  width: 90%;              /* fill grid cell */
+  min-height: 160px;        /* shorter vertical size */
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #0f172a;
+  animation: breatheGlow 6s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.advisory-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 768px) {
+  .advisory-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 1rem;                  /* smaller gap */
+  }
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 768px) {
+  .advisory-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+    gap: 1rem;                  /* smaller gap */
+  }
+}
+
+/* Distinct accent borders per card */
+.advisory-card.strategy { border-top: 6px solid #2563eb; }   /* blue */
+.advisory-card.compliance { border-top: 6px solid #10b981; } /* green */
+.advisory-card.insights { border-top: 6px solid #9333ea; }   /* purple */
+.advisory-card.alerts { border-top: 6px solid #ef4444; }     /* red */
+
+/* Card headings */
+.advisory-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Lists inside cards */
+.advisory-card ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  list-style-type: disc;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+/* Featured section */
+.advisory-feature {
+  background: #e0f2fe;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.advisory-feature h2 {
+  color: #2563eb;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Quick links */
+.advisory-quicklinks {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: pulseText 12s ease-in-out infinite ;
+}
+
+.advisory-quicklinks h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.advisory-quicklinks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.advisory-quicklinks li {
+  margin: 0.5rem 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.advisory-quicklinks li:hover {
+  color: #2563eb;
+  transform: translateX(6px);
+}
+
+/* Banner */
+.advisory-banner {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: pulseText 12s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes breatheGlow {
+  0%   { transform: scale(1);   box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  50%  { transform: scale(1.02); box-shadow: 0 6px 16px rgba(37,99,235,0.3); }
+  100% { transform: scale(1);   box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+}
+
+@keyframes pulseText {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
